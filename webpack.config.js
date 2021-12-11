@@ -15,7 +15,7 @@ module.exports = {
     extensions: ['.js', '.ts'],
   },
   entry: {
-    scripts: path.resolve(__dirname,'./src/index.ts'),
+    scripts: path.resolve(__dirname,'./src/index.js'),
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -35,11 +35,6 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        test: /.(ts|tsx)$/i,
-        loader: 'ts-loader',
-        exclude: ['/node_modules/'],
-      },
       {
         test: /\.html$/i,
         loader: "html-loader",
